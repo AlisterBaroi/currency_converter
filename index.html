@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        body {
+            margin-top: 70px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-4 text-center mb-3">Currency Converter</h1>
+                <form>
+                    <div class="form-group">
+                        <input id="bdtInput" type="number" class="form-control form-control-lg" placeholder="Enter BDT Amount...">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="card bg-primary mb-2">
+                        <div class="card-body">
+                            <h4>USD</h4>
+                            <div id="usdOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-success mb-2">
+                        <div class="card-body">
+                            <h4>Euro</h4>
+                            <div id="euroOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-danger mb-2">
+                        <div class="card-body">
+                            <h4>Rs</h4>
+                            <div id="rsOutput"></div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="display-4 text-center alister">Alister Animesh Baroi</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('output').style.visibility = "hidden";
+        document.getElementById('bdtInput').addEventListener("input", function(e) {
+            document.getElementById('output').style.visibility = "visible";
+            let tk = e.target.value;
+            document.getElementById('usdOutput').innerHTML = tk / 80;
+
+            document.getElementById('euroOutput').innerHTML = tk / 95;
+
+            document.getElementById('rsOutput').innerHTML = tk / 1.27;
+        });
+    </script>
+</body>
+
+</html>
