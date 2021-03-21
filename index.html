@@ -42,7 +42,7 @@
 
                     <div class="card bg-danger mb-2">
                         <div class="card-body">
-                            <h4>Rs</h4>
+                            <h4>CAD</h4>
                             <div id="rsOutput"></div>
                         </div>
                     </div>
@@ -58,11 +58,11 @@
         document.getElementById('bdtInput').addEventListener("input", function(e) {
             document.getElementById('output').style.visibility = "visible";
             let tk = e.target.value;
-            document.getElementById('usdOutput').innerHTML = tk / 80;
+            document.getElementById('usdOutput').innerHTML = tk / 84.62;
 
-            document.getElementById('euroOutput').innerHTML = tk / 95;
+            document.getElementById('euroOutput').innerHTML = tk / 101.10;
 
-            document.getElementById('rsOutput').innerHTML = tk / 1.27;
+            document.getElementById('rsOutput').innerHTML = tk / 67.53;
         });
     </script>
 </body>
